@@ -1,26 +1,48 @@
 import React from "react";
 import { MdDehaze } from "react-icons/md";
-import { NavBar, Burguer, Settings } from "./styles";
+import { NavBar, NavLeft, NavRight, Settings, MenuItems } from "./styles";
+import RoundedImage from "../RoundedImage";
+import StyledLink from "../StyledLink";
+
 import imgHeader from "../../img/logo_header.svg";
 import imgProfile from "../../img/profile.jpg";
 
 const Header = () => (
   <header>
     <NavBar>
-      <Burguer>
-        <span>
+      <NavLeft>
+        <span className="burguer">
           <MdDehaze size={28} />
         </span>
-        <a href="https://www.triider.com.br/">
+        <a className="logo-header" href="https://www.triider.com.br/">
           <img src={imgHeader} alt="Triider" />
         </a>
-      </Burguer>
+      </NavLeft>
+      <NavRight>
+        <MenuItems>
+          <div>
+            <StyledLink active>Início</StyledLink>
+          </div>
+          <div>
+            <StyledLink>Catálogo de serviços</StyledLink>
+          </div>
+          <div>
+            <StyledLink>Meus Orçamentos</StyledLink>
+          </div>
+          <div>
+            <StyledLink>Mensagens (N)</StyledLink>
+          </div>
+          <div>
+            <StyledLink>Ajuda</StyledLink>
+          </div>
+        </MenuItems>
 
-      <Settings>
-        <img src={imgProfile} alt="Foto de Perfil" />
-        <span>Gregory</span>
-        <span className="arrow-down" />
-      </Settings>
+        <Settings>
+          <RoundedImage size="small" src={imgProfile} alt="Foto de Perfil" />
+          <span>Gregory</span>
+          <span className="arrow-down" />
+        </Settings>
+      </NavRight>
     </NavBar>
   </header>
 );
