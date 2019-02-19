@@ -25,6 +25,25 @@ export const flex = {
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
+    `,
+    hCenterAround: css`
+      display: flex;
+      flex-direction: row;
+      align-items: space-around;
+      justify-content: center;
+    `,
+    CenterCenter: css`
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    `,
+    vCenterStartWrap: css`
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
     `
   },
   column: {
@@ -39,6 +58,12 @@ export const flex = {
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
+    `,
+    hStartCenter: css`
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
     `
   }
 };

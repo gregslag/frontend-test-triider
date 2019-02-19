@@ -6,8 +6,8 @@ const sizes = {
     height: 30px;
   `,
   medium: css`
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   `
 };
 

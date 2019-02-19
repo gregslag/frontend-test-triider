@@ -6,6 +6,6 @@ export const Title = styled.h1`
   color: ${colors.gray};
   font-size: 1rem;
   text-align: center;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   font-weight: normal;
 `;

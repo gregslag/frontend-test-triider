@@ -3,7 +3,13 @@ export default (state = {}, action) => {
     case "ORDERS_LOADED":
       return {
         ...state,
-        data: action.payload
+        orders: {
+          open: action.payload.filter(
+            r => r.status === "" || r.status === "contratado"
+          ),
+          completed: action.payload.filter(r => r.status === "finalizado"),
+          canceled: action.payload.filter(r => r.status === "cancelado")
+        }
       };
     default:
       return state;

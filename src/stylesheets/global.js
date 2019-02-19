@@ -14,9 +14,19 @@ export default createGlobalStyle`
         background: ${colors.greyLighter};
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
-        color: ${colors.gray}
+        color: ${colors.gray};
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
     html, body, #root {
-        height: 100%;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
+    main {
+      flex: 1;
+      padding-top: 50px;
+    }
+
 `;

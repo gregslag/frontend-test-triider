@@ -7,6 +7,9 @@ export const NavBar = styled.header`
   background: ${colors.white};
   box-shadow: 0 4px 4px ${colors.blackBis};
   height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 `;
 
 export const NavLeft = styled.div`
