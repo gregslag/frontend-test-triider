@@ -4,7 +4,7 @@ export const colors = {
   white: "#FFFFFF",
   grayLighter: "#FAFAFA",
   grayDark: "#343a40",
-  gray: "#868e96",
+  gray: "#565656",
   danger: "#dc3545",
   success: "#28a745"
 };

@@ -14,6 +14,7 @@ export default createGlobalStyle`
         background: ${colors.greyLighter};
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
+        color: ${colors.gray}
     }
     html, body, #root {
         height: 100%;

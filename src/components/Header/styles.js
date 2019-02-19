@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors, flex, device } from "../../stylesheets";
 
-export const NavBar = styled.div`
+export const NavBar = styled.header`
   ${flex.row.vCenterBetween}
   padding: 0 0.5rem;
   background: ${colors.white};
@@ -12,12 +12,6 @@ export const NavBar = styled.div`
 export const NavLeft = styled.div`
   ${flex.row.vCenterAround}
   width: 100px;
-  .logo-header {
-    img {
-      width: 60px;
-      height: 20px;
-    }
-  }
 
   @media ${device.laptop} {
     .burguer {
@@ -27,6 +21,7 @@ export const NavLeft = styled.div`
 `;
 
 export const NavRight = styled.div`
+height: 100%;
   ${flex.row.vCenterEnd}
   
   @media ${device.laptop} {
@@ -37,6 +32,7 @@ export const NavRight = styled.div`
 export const Settings = styled.div`
   ${flex.row.vCenterAround}
   width: 120px;
+  height: 100%;
 
   .arrow-down {
     width: 0;
