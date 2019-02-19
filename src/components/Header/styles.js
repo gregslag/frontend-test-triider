@@ -1,16 +1,8 @@
-import styled, { css } from "styled-components";
-import { colors } from "../../stylesheets";
-
-const flexCenterAround = css`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-`;
+import styled from "styled-components";
+import { colors, flex } from "../../stylesheets";
 
 export const NavBar = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
+  ${flex.rowCenterBetween}
   padding: 0.5rem;
   background: ${colors.white};
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -18,7 +10,7 @@ export const NavBar = styled.div`
 `;
 
 export const Burguer = styled.div`
-  ${flexCenterAround}
+  ${flex.rowCenterAround}
   width: 100px;
   a {
     img {
@@ -29,7 +21,7 @@ export const Burguer = styled.div`
 `;
 
 export const Settings = styled.div`
-  ${flexCenterAround}
+  ${flex.rowCenterAround}
   width: 120px;
 
   img {
