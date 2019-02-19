@@ -6,5 +6,6 @@ export const colors = {
   grayDark: "#343a40",
   gray: "#565656",
   danger: "#dc3545",
-  success: "#28a745"
+  success: "#28a745",
+  blackBis: "rgba(0, 0, 0, 0.25)"
 };

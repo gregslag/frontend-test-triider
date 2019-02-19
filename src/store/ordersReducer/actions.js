@@ -1,9 +1,9 @@
 import api from "../../services/api";
 
-export const fetchRequests = () => dispatch => {
+export const fetchOrders = () => dispatch => {
   api.get("/orders").then(res =>
     dispatch({
-      type: "REQUESTS_LOADED",
+      type: "ORDERS_LOADED",
       payload: res.data
     })
   );

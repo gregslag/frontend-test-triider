@@ -5,7 +5,7 @@ export const StyledFooter = styled.footer`
   ${flex.row.vCenterBetween}
   padding: 1rem;
   background: ${colors.white};
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 -2px 4px ${colors.blackBis};
   height: 120px;
 
   @media ${device.tablet} {

@@ -5,7 +5,7 @@ export const NavBar = styled.header`
   ${flex.row.vCenterBetween}
   padding: 0 0.5rem;
   background: ${colors.white};
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px ${colors.blackBis};
   height: 50px;
 `;
 
@@ -45,7 +45,7 @@ export const Settings = styled.div`
   @media ${device.laptop} {
     width: 160px;
     padding: 0 1rem;
-    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    border-left: 1px solid ${colors.blackBis};
   }
 `;
 
