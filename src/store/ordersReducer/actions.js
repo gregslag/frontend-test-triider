@@ -1,6 +1,7 @@
 import api from "../../services/api";
 import { orders } from "../../data/orders";
 
+/* Busca os dados da api, caso ocorra um erro, pega os dados locais */
 export const fetchOrders = () => dispatch => {
   api
     .get("/orders")

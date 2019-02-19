@@ -7,7 +7,7 @@ import { fetchOrders } from "../../store/ordersReducer/actions";
 import PageTile from "../../components/PageTitle";
 import StyledLink from "../../components/StyledLink";
 import Box from "../../components/Box";
-import BoxList from "../../components/BoxList";
+import List from "../../components/List";
 import RoundedImage from "../../components/RoundedImage";
 import Button from "../../components/Button";
 import Label from "../../components/Label";
@@ -93,7 +93,7 @@ class OrdersList extends React.Component {
           </Slider>
         </TitleWrapper>
 
-        <BoxList>
+        <List>
           {orders[filter].map((order, index) => (
             <Box key={`order-${index}-${order.id}`}>
               <TitleBoxWrapper>
@@ -165,7 +165,7 @@ class OrdersList extends React.Component {
               </Button>
             </Box>
           ))}
-        </BoxList>
+        </List>
       </Container>
     );
   }

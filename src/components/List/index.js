@@ -2,10 +2,10 @@ import React from "react";
 
 import { Container, List } from "./styles";
 
-const BoxList = ({ children }) => (
+const List = ({ children }) => (
   <Container>
     <List>{children}</List>
   </Container>
 );
 
-export default BoxList;
+export default List;
