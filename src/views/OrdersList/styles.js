@@ -1,13 +1,6 @@
 import styled from "styled-components";
 import { flex, colors, device } from "../../stylesheets";
 
-export const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background: ${colors.grayLighter};
-`;
-
 export const Slider = styled.div`
   overflow-x: scroll;
   overflow-y: hidden;
@@ -48,12 +41,6 @@ export const TitleWrapper = styled.div`
       padding: 0;
     }
   }
-`;
-
-export const Divider = styled.div`
-  width: 75%;
-  height: 1px;
-  background: ${colors.grayLight};
 `;
 
 export const Number = styled.div`

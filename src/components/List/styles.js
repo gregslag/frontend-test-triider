@@ -5,7 +5,7 @@ export const Container = styled.div`
   ${flex.row.CenterCenter}
 `;
 
-export const List = styled.div`
+export const ListBody = styled.div`
   ${flex.column.hCenterAroud}
   padding: 1rem 0;
   max-width: 95%;

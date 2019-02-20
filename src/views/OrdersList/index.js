@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { withRouter, Link } from "react-router-dom";
 import { MdHistory } from "react-icons/md";
 
 import { connect } from "react-redux";
@@ -13,13 +14,13 @@ import Button from "../../components/Button";
 import Label from "../../components/Label";
 import Card, { CardAvatar, CardContent } from "../../components/Card";
 import StarRating from "../../components/StarRating";
+import Container from "../../components/Container";
+import Divider from "../../components/Divider";
 
 import {
-  Container,
   Slider,
   TitleWrapper,
   TitleBoxWrapper,
-  Divider,
   ImagesWrapper,
   QuotesWrapper,
   Number
@@ -160,9 +161,13 @@ class OrdersList extends React.Component {
                 )}
               </QuotesWrapper>
 
-              <Button size="larger">
-                {order.quotes.length === 0 ? "VER DETALHES" : "VER ORÇAMENTOS"}
-              </Button>
+              <Link to={`/orcamentos/${order.id}`}>
+                <Button size="larger">
+                  {order.quotes.length === 0
+                    ? "VER DETALHES"
+                    : "VER ORÇAMENTOS"}
+                </Button>
+              </Link>
             </Box>
           ))}
         </List>
@@ -172,10 +177,20 @@ class OrdersList extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  orders: state.ordersReducer.orders
+  orders: {
+    open: state.ordersReducer.orders.filter(
+      r => r.status === "" || r.status === "contratado"
+    ),
+    completed: state.ordersReducer.orders.filter(
+      r => r.status === "finalizado"
+    ),
+    canceled: state.ordersReducer.orders.filter(r => r.status === "cancelado")
+  }
 });
 
-export default connect(
-  mapStateToProps,
-  { fetchOrders }
-)(OrdersList);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    { fetchOrders }
+  )(OrdersList)
+);

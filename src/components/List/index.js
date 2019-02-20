@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Container, List } from "./styles";
+import { Container, ListBody } from "./styles";
 
 const List = ({ children }) => (
   <Container>
-    <List>{children}</List>
+    <ListBody>{children}</ListBody>
   </Container>
 );
 

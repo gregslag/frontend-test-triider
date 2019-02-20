@@ -28,7 +28,7 @@ const Header = () => (
           <StyledLink>Meus Orçamentos</StyledLink>
         </div>
         <div>
-          <StyledLink>Mensagens (N)</StyledLink>
+          <StyledLink>Mensagens (4)</StyledLink>
         </div>
         <div>
           <StyledLink>Ajuda</StyledLink>
